@@ -1,29 +1,21 @@
-rInput = 0
-while rInput == 0:
-    print("Qual a bateria atual?")
-    batAtual = float(input())
-    if batAtual < 0 or batAtual > 100:
-        print("Bateria inválida. Digite um valor entre 0 e 100.")
-    else:
-        rInput = 1
 
-rInput = 0
-while rInput == 0:
-    print("Qual a duração da missão, em minutos?")
-    durMissao = float(input())
-    if durMissao < 0:
-        print("Duração inválida. Digite um valor maior ou igual a 0.")
-    else:
-        rInput = 1
+print("Qual a bateria atual?")
+batAtual = float(input())
+if batAtual < 0 or batAtual > 100:
+    print("Valor inválido")
+    exit()
 
-rInput = 0
-while rInput == 0:
-    print("Qual o consumo de bateria por minuto, em porcentagem?")
-    conMinuto = float(input())
-    if conMinuto < 0 or conMinuto > 100:
-        print("Consumo inválido. Digite um valor entre 0 e 100.")
-    else:
-        rInput = 1
+print("Qual a duração da missão, em minutos?")
+durMissao = float(input())
+if durMissao <= 0:
+    print("Valor inválido")
+    exit()
+
+print("Qual o consumo de bateria por minuto, em porcentagem?")
+conMinuto = float(input())
+if conMinuto < 0 or conMinuto > 100:
+    print("Valor inválido")
+    exit()
 
 
 conTotal = durMissao * conMinuto
